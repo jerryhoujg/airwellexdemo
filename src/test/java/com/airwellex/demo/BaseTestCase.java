@@ -3,6 +3,7 @@ package com.airwellex.demo;
 import com.airwellex.demo.utils.RestfulClientFactory;
 import com.github.springtestdbunit.TransactionDbUnitTestExecutionListener;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
@@ -24,6 +25,12 @@ public class BaseTestCase {
 
     protected final WebTarget target(final String path) {
         return RestfulClientFactory.getClient().target("http://preview.airwallex.com:30001/").path(path);
+
+    }
+
+
+    @Test
+    public void test() {
 
     }
 
